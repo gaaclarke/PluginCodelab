@@ -83,23 +83,29 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text('Running on: $_platformVersion\n'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  _makeKey(keyType: _KeyType.White, key: 60),
-                  _makeKey(keyType: _KeyType.Black, key: 61),
-                  _makeKey(keyType: _KeyType.White, key: 62),
-                  _makeKey(keyType: _KeyType.Black, key: 63),
-                  _makeKey(keyType: _KeyType.White, key: 64),
-                  _makeKey(keyType: _KeyType.White, key: 65),
-                  _makeKey(keyType: _KeyType.Black, key: 66),
-                  _makeKey(keyType: _KeyType.White, key: 67),
-                  _makeKey(keyType: _KeyType.Black, key: 68),
-                  _makeKey(keyType: _KeyType.White, key: 69),
-                  _makeKey(keyType: _KeyType.Black, key: 70),
-                  _makeKey(keyType: _KeyType.White, key: 71),
-                ],
-              )
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Container(
+                  width: 600,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      _makeKey(keyType: _KeyType.White, key: 60),
+                      _makeKey(keyType: _KeyType.Black, key: 61),
+                      _makeKey(keyType: _KeyType.White, key: 62),
+                      _makeKey(keyType: _KeyType.Black, key: 63),
+                      _makeKey(keyType: _KeyType.White, key: 64),
+                      _makeKey(keyType: _KeyType.White, key: 65),
+                      _makeKey(keyType: _KeyType.Black, key: 66),
+                      _makeKey(keyType: _KeyType.White, key: 67),
+                      _makeKey(keyType: _KeyType.Black, key: 68),
+                      _makeKey(keyType: _KeyType.White, key: 69),
+                      _makeKey(keyType: _KeyType.Black, key: 70),
+                      _makeKey(keyType: _KeyType.White, key: 71),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
